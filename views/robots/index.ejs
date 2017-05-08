@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+	  <a href="/robots/new"></a>
+    <h1><%= title %></h1>
+	  
+    <ul>
+      <% robots.forEach(function(robot){ %>
+        <li>
+			<a href= "/robots/<%= robot._id %>"><%= robot._id %></a>
+		<thead>
+		<tr>
+			<td><%= robot.name %></td>
+	        <td><%= robot.description %></td>
+	        <td><%= robot.me %></td>
+		 </tr>
+      </thead>
+		</li>
+      <% }); %>
+    </ul>
+	<button>+New Robot</button> <button type="button" class="btn btn-success pull-right" style="margin-left: 0.5em; margin-top: 0.7em;">recycle</button>
+ </body>
+</html>
